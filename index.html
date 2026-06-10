@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Q&A — Halal Affordable Housing</title>
+<title>Halal Housing Q&A — Halal Affordable Housing Investment Fund</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -378,7 +378,7 @@
   <div class="header-inner">
     <p class="eyebrow">Halal Affordable Housing Investment Fund</p>
     <h1>Halal Housing Q&amp;A</h1>
-    <p>Questions from investors, community members, and prospective partners — answered publicly for transparency.</p>
+    <p>Questions from Halal Housings, community members, and prospective partners — answered publicly for transparency.</p>
     <a id="ask-link" href="#" class="ask-btn" target="_blank" rel="noopener">Submit a question →</a>
   </div>
 </header>
@@ -445,8 +445,9 @@
    CONFIG — edit these values for your repo
    ═══════════════════════════════════════════ */
 const CONFIG = {
-  GITHUB_OWNER: 'somaryaqub',
-  GITHUB_REPO:  'questions',
+  GITHUB_OWNER: 'somaryaqub',   // e.g. 'islamicfamily'
+  GITHUB_REPO:  'questions',         // e.g. 'hahif-qa'
+
   /* Label used to mark a question as answered */
   ANSWERED_LABEL: 'answered',
 
@@ -486,7 +487,7 @@ let currentSearch = '';
 
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
-  const configured = CONFIG.GITHUB_OWNER !== 'somaryaqub';
+  const configured = CONFIG.GITHUB_OWNER !== 'YOUR_GITHUB_USERNAME';
 
   if (!configured) {
     document.getElementById('setup-notice').style.display = 'block';
@@ -496,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const repoUrl = `https://github.com/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`;
   const submitUrl = CONFIG.SUBMIT_URL ||
-    `${repoUrl}/issues/new?labels=question&title=Question%3A+&body=%0A%0A---%0A*Submitted+via+HAHIF+Investor+Q%26A+page*`;
+    `${repoUrl}/issues/new?labels=question&title=Question%3A+&body=%0A%0A---%0A*Submitted+via+HAHIF+Halal Housing+Q%26A+page*`;
 
   document.getElementById('ask-link').href = submitUrl;
   document.getElementById('footer-repo-link').href = `${repoUrl}/issues`;
@@ -694,7 +695,7 @@ function renderMockData() {
   allIssues = [
     {
       number: 12, title: 'What is the minimum investment amount for Class 1 LP units?',
-      body: 'Curious about the entry threshold for retail investors.\n\n---\n**Answer:**\nClass 1 LP units are available to eligible investors starting at $25,000 CAD. Please refer to the Offering Memorandum for full eligibility criteria.',
+      body: 'Curious about the entry threshold for retail Halal Housings.\n\n---\n**Answer:**\nClass 1 LP units are available to eligible Halal Housings starting at $25,000 CAD. Please refer to the Offering Memorandum for full eligibility criteria.',
       labels: [{name:'question'},{name:'answered'},{name:'Eligibility & Minimums'}],
       reactions: {'+1': 14}, created_at: '2025-10-02T10:00:00Z',
       html_url: '#'
@@ -714,7 +715,7 @@ function renderMockData() {
       html_url: '#'
     },
     {
-      number: 9, title: 'What is the target IRR for Class 2 LP investors?',
+      number: 9, title: 'What is the target IRR for Class 2 LP Halal Housings?',
       body: '',
       labels: [{name:'question'},{name:'answered'},{name:'Returns & Distributions'}],
       reactions: {'+1': 17}, created_at: '2025-09-15T10:00:00Z',
